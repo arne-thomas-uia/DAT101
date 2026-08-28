@@ -1,10 +1,7 @@
 "use strict"
 import { printOut } from "../../common/script/utils.mjs";
 
-let a = 36; // Timer
-let days = a / 24;
-const day = Math.floor(days);
-const rest = days - day;
-const hours = rest * 24;
+let a = 5.01;
+let b = Math.ceil(a);
 
-printOut({a, days, day, rest, hours});
+printOut({a, b});
