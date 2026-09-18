@@ -53,13 +53,12 @@ if(imageUserSize > imageMaxSize){
 
 printOut(newLine);
 
-printOut("--- Part 7 ----------------------------------------------------------------------------------------------");
-/* Put your code below here!*/
-
-printOut(newLine);
-
 printOut("--- Part 8 ----------------------------------------------------------------------------------------------");
-/* Put your code below here!*/
+const monthList =["January", "February", "Mars", "April", "Mai", 
+"Jun", "Juli", "August", "September", "October", "November", "December"];
+const noOfMonth = monthList.length;
+const monthName = monthList[Math.floor(Math.random() * noOfMonth)];
+
 
 printOut(newLine);
 
