@@ -2,6 +2,8 @@
 import { printOut, newLine } from "../../common/script/utils.mjs";
 
 printOut("--- Part 1, 2, 3 ----------------------------------------------------------------------------------------");
+
+
 const wakeUpTime = 6;
 const time = 7;
 if (wakeUpTime === time) {
