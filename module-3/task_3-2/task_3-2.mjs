@@ -20,8 +20,12 @@ printOut(task1Line);
 printOut(newLine);
 
 printOut("--- Part 2 ----------------------------------------------------------------------------------------------");
-/* Put your code below here!*/
-
+const task2GuessNumber = 45;
+let task2RandomNumber = 0;
+while (task2RandomNumber !== task2GuessNumber) {
+    task2RandomNumber = Math.floor(Math.random() * 60) + 1;
+}
+printOut("The random number is: " + task2RandomNumber);
 printOut(newLine);
 
 printOut("--- Part 3 ----------------------------------------------------------------------------------------------");
