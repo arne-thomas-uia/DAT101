@@ -29,8 +29,19 @@ printOut("The random number is: " + task2RandomNumber);
 printOut(newLine);
 
 printOut("--- Part 3 ----------------------------------------------------------------------------------------------");
-/* Put your code below here!*/
-
+const task3GuessNumber = 45;
+let task3RandomNumber = 0;
+let task3Attempts = 0;
+let task3TimeStart = Date.now();
+while (task3RandomNumber !== task3GuessNumber) {
+    task3RandomNumber = Math.floor(Math.random() * 1000000) + 1;
+    task3Attempts++;
+}
+let task3TimeEnd = Date.now();
+let task3TimeTaken = (task3TimeEnd - task3TimeStart);
+printOut(`The random number is: ${task3RandomNumber}`);
+printOut(`Number of attempts: ${task3Attempts}`);
+printOut(`Time taken: ${task3TimeTaken} ms`);
 printOut(newLine);
 
 printOut("--- Part 4 ----------------------------------------------------------------------------------------------");
