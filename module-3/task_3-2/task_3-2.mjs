@@ -45,7 +45,18 @@ printOut(`Time taken: ${task3TimeTaken} ms`);
 printOut(newLine);
 
 printOut("--- Part 4 ----------------------------------------------------------------------------------------------");
-/* Put your code below here!*/
+/*
+Use a "for" loop and a "while" loop to find all prime numbers greater than 1 and less than 200.
+*/
+for(let i = 2; i <= 200; i++) {
+    let isPrime = true;
+    let j = i - 1;
+    while(!isPrime && j > 1) {
+        if(i % j === 0){
+            isPrime = false;
+        }
+        j--;
+    }
 
 printOut(newLine);
 
