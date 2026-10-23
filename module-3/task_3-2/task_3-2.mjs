@@ -89,6 +89,10 @@ printOut(newLine);
 printOut("--- Part 7 ----------------------------------------------------------------------------------------------");
 let throwCount = 0;
 let hasStraight = false;
+let hasTower = false;
+let has3Pairs = false;
+let hasYatzy = false;
+
 do {
   const d1 = Math.floor(Math.random() * 6) + 1;
   const d2 = Math.floor(Math.random() * 6) + 1;
