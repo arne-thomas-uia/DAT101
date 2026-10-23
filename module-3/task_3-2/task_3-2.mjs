@@ -83,6 +83,82 @@ printOut(newLine);
 
 printOut("--- Part 6 ----------------------------------------------------------------------------------------------");
 /* Put your code below here!*/
+const grade1 = Math.round((Math.floor(Math.random() * 236) + 1) / 236 * 100);
+const grade2 = Math.round((Math.floor(Math.random() * 236) + 1) / 236 * 100);
+const grade3 = Math.round((Math.floor(Math.random() * 236) + 1) / 236 * 100);
+const grade4 = Math.round((Math.floor(Math.random() * 236) + 1) / 236 * 100);
+const grade5 = Math.round((Math.floor(Math.random() * 236) + 1) / 236 * 100);
+
+if(grade1 <= 40){
+    printOut(`Grade 1: F - ${grade1}`);
+}else if(grade1 <= 52){
+    printOut(`Grade 1: E - ${grade1}`);
+}else if(grade1 <= 64){
+    printOut(`Grade 1: D - ${grade1}`);
+}else if(grade1 <= 76){
+    printOut(`Grade 1: C - ${grade1}`);
+}else if(grade1 <= 88){
+    printOut(`Grade 1: B - ${grade1}`);
+}else{
+    printOut(`Grade 1: A - ${grade1}`);
+}
+
+
+if(grade2 <= 40){
+    printOut(`Grade 2: F - ${grade2}`);
+}else if(grade2 <= 52){
+    printOut(`Grade 2: E - ${grade2}`);
+}else if(grade2 <= 64){
+    printOut(`Grade 2: D - ${grade2}`);
+}else if(grade2 <= 76){
+    printOut(`Grade 2: C - ${grade2}`);
+}else if(grade2 <= 88){
+    printOut(`Grade 2: B - ${grade2}`);
+}else{
+    printOut(`Grade 2: A - ${grade2}`);
+}
+
+if(grade3 <= 40){
+    printOut(`Grade 3: F - ${grade3}`);
+}else if(grade3 <= 52){
+    printOut(`Grade 3: E - ${grade3}`);
+}else if(grade3 <= 64){
+    printOut(`Grade 3: D - ${grade3}`);
+}else if(grade3 <= 76){
+    printOut(`Grade 3: C - ${grade3}`);
+}else if(grade3 <= 88){
+    printOut(`Grade 3: B - ${grade3}`);
+}else{
+    printOut(`Grade 3: A - ${grade3}`);
+}
+
+if(grade4 <= 40){
+    printOut(`Grade 4: F - ${grade4}`);
+}else if(grade4 <= 52){
+    printOut(`Grade 4: E - ${grade4}`);
+}else if(grade4 <= 64){
+    printOut(`Grade 4: D - ${grade4}`);
+}else if(grade4 <= 76){
+    printOut(`Grade 4: C - ${grade4}`);
+}else if(grade4 <= 88){
+    printOut(`Grade 4: B - ${grade4}`);
+}else{
+    printOut(`Grade 4: A - ${grade4}`);
+}
+
+if(grade5 <= 40){
+    printOut(`Grade 5: F - ${grade5}`);
+}else if(grade5 <= 52){
+    printOut(`Grade 5: E - ${grade5}`);
+}else if(grade5 <= 64){
+    printOut(`Grade 5: D - ${grade5}`);
+}else if(grade5 <= 76){
+    printOut(`Grade 5: C - ${grade5}`);
+}else if(grade5 <= 88){
+    printOut(`Grade 5: B - ${grade5}`);
+}else{
+    printOut(`Grade 5: A - ${grade5}`);
+}
 
 printOut(newLine);
 
@@ -155,10 +231,33 @@ do {
   if(amount.includes("6") === true){
     if(hasStraight === false){
         hasStraight = true;
-        printOut({ diceThrow, diceCount, amount, throwCount });
+        printOut("---- Straight ----");
+        printOut({ diceThrow, throwCount });
+        printOut("------------------");
+    }
+  }else if(amount === "010100"){
+    if(hasTower === false){
+        hasTower = true;
+        printOut("---- Tower -------");
+        printOut({ diceThrow, throwCount });
+        printOut("------------------");
+    }
+  }else if(amount === "030000"){
+    if(has3Pairs === false){
+        has3Pairs = true;
+        printOut("---- 3 Pairs -----");
+        printOut({ diceThrow, throwCount });
+        printOut("------------------");
+    }
+  }else if(amount === "000001"){
+        if(hasYatzy === false){
+        hasYatzy = true;
+        printOut("---- Yatzy -------");
+        printOut({ diceThrow, throwCount });
+        printOut("------------------");
     }
   }
 
   
-} while (hasStraight === false);
+} while (hasStraight === false || hasTower === false || has3Pairs === false || hasYatzy === false);
 printOut(newLine);
