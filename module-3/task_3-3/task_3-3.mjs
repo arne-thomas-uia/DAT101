@@ -2,12 +2,31 @@
 import { printOut, newLine } from "../../common/script/utils.mjs";
 
 printOut("--- Part 1 ----------------------------------------------------------------------------------------------");
-/* Put your code below here!*/
+
+function printDate() {
+	const dateOption = {
+		weekday: "long",
+		year: "numeric",
+		month: "long",
+		day: "numeric"
+	}
+  const toDay = new Date();
+  printOut(toDay.toLocaleString("no-Nb", dateOption));
+	return toDay;
+}
 
 printOut(newLine);
 
 printOut("--- Part 2 ----------------------------------------------------------------------------------------------");
-/* Put your code below here!*/
+function calcDaysToGTA(){
+	const toDay = printDate();
+	const gtaDate = new Date("11/19/2026");
+	printOut(gtaDate.toLocaleString("no-Nb"));
+	const days = (gtaDate - toDay) / (1000 * 60 * 60 * 24) ;
+	printOut(`There is ${Math.floor(days)} days left to GTA - 6 release.`);
+}
+
+calcDaysToGTA();
 
 printOut(newLine);
 
